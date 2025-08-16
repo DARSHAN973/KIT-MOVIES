@@ -6,10 +6,25 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../app/generated/prisma"
 }
 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id         Int      @id @default(autoincrement())
+  title      String
+  description String?
+  year       String?
+  duration   String?
+  genre      String?
+  rating     String?
+  image      String
+  category   String?
+  type       String?   // <-- Add this line
+  actors     String?
+  actresses  String?
+  createdAt  DateTime  @default(now())
 }
