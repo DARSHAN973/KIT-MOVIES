@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import { Film, Home, Music, FileText, BookOpen, LogIn, LogOut, Menu, X, Search } from 'lucide-react';
-import client from '../generated/prisma/client';
+import client from '../../generated/prisma/client';
 
 const AnimatedHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
